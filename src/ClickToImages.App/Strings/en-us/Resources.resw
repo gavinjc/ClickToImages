@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Window and About -->
+  <data name="WindowTitle" xml:space="preserve"><value>ClickTo: Images</value></data>
+  <data name="WindowTitleWithFolderFormat" xml:space="preserve">
+    <value>{0} — {1}</value>
+    <comment>{0} = folder name, {1} = app name (WindowTitle)</comment>
+  </data>
+  <data name="AppDescriptionText" xml:space="preserve"><value>Save the pages of a PDF as images, straight from File Explorer.</value></data>
+
+  <!-- Toolbar -->
+  <data name="UndoButton.Content" xml:space="preserve"><value>Undo</value></data>
+  <data name="UndoButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Undo (Ctrl+Z)</value></data>
+  <data name="UndoButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Undo</value></data>
+  <data name="SelectPagesButton.Content" xml:space="preserve"><value>Tick</value></data>
+  <data name="SelectPagesButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Tick pages</value></data>
+  <data name="SelectAllItem.Text" xml:space="preserve"><value>All pages</value></data>
+  <data name="SelectNoneItem.Text" xml:space="preserve"><value>No pages</value></data>
+  <data name="InvertSelectionItem.Text" xml:space="preserve"><value>Swap ticked and unticked</value></data>
+  <data name="SelectOddItem.Text" xml:space="preserve"><value>Odd pages</value></data>
+  <data name="SelectEvenItem.Text" xml:space="preserve"><value>Even pages</value></data>
+  <data name="PageRangeBox.PlaceholderText" xml:space="preserve"><value>Pages, e.g. 1-4, 7, 12-</value></data>
+  <data name="PageRangeBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Pages to tick</value></data>
+  <data name="PageRangeInvalidText.Text" xml:space="preserve"><value>Type page numbers or ranges separated by commas, like 1-4, 7, 12-. Each page has to exist.</value></data>
+  <data name="ApplyRangeButton.Content" xml:space="preserve"><value>Tick range</value></data>
+  <data name="ApplyRangeButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Tick range</value></data>
+  <data name="CheckedPagesFormat" xml:space="preserve">
+    <value>{0} of {1} pages ticked</value>
+    <comment>{0} = checked pages, {1} = all pages, across every open PDF</comment>
+  </data>
+  <data name="SaveButton.Content" xml:space="preserve"><value>Save</value></data>
+  <data name="SaveButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Save the ticked pages as images</value></data>
+  <data name="SaveButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Save</value></data>
+  <data name="AboutButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>About ClickTo: Images</value></data>
+  <data name="AboutButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>About ClickTo: Images</value></data>
+
+  <!-- Options panel -->
+  <data name="OptionsHeaderButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Options</value></data>
+  <data name="OptionsHeaderText.Text" xml:space="preserve"><value>Options</value></data>
+  <data name="ResolutionCombo.Header" xml:space="preserve"><value>Resolution</value></data>
+  <data name="ResolutionScreenItem.Content" xml:space="preserve"><value>Screen (96 DPI)</value></data>
+  <data name="ResolutionGoodItem.Content" xml:space="preserve"><value>Good (150 DPI)</value></data>
+  <data name="ResolutionPrintItem.Content" xml:space="preserve"><value>Print (300 DPI)</value></data>
+  <data name="ResolutionMaximumItem.Content" xml:space="preserve"><value>Maximum (600 DPI)</value></data>
+  <data name="FormatCombo.Header" xml:space="preserve"><value>Format</value></data>
+  <data name="FormatPngItem.Content" xml:space="preserve"><value>PNG</value></data>
+  <data name="FormatJpegItem.Content" xml:space="preserve"><value>JPEG</value></data>
+  <data name="FormatTiffItem.Content" xml:space="preserve"><value>TIFF</value></data>
+  <data name="JpegQualitySlider.Header" xml:space="preserve"><value>JPEG quality</value></data>
+  <data name="TransparentCheckBox.Content" xml:space="preserve"><value>Transparent background</value></data>
+  <data name="TransparentCheckBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>PNG only. JPEG and TIFF always have a white background.</value></data>
+  <data name="OutputLocationCombo.Header" xml:space="preserve"><value>Save to</value></data>
+  <data name="OutputSubfolderItem.Content" xml:space="preserve"><value>A folder named after each PDF</value></data>
+  <data name="OutputBesidePdfItem.Content" xml:space="preserve"><value>The same folder as each PDF</value></data>
+  <data name="OutputChosenFolderItem.Content" xml:space="preserve"><value>A folder I choose</value></data>
+  <data name="ChooseFolderButton.Content" xml:space="preserve"><value>Choose folder&#8230;</value></data>
+  <data name="ChooseFolderButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Choose folder</value></data>
+  <data name="NamingPatternBox.Header" xml:space="preserve"><value>File names</value></data>
+  <data name="NamingTokensText.Text" xml:space="preserve"><value>Use {name} {page} {total} {dpi}</value></data>
+  <data name="NamingExampleFormat" xml:space="preserve">
+    <value>Example: {0}</value>
+    <comment>{0} = the file name the first page would get</comment>
+  </data>
+  <data name="NamingProblemEmpty" xml:space="preserve"><value>Type a file name.</value></data>
+  <data name="NamingProblemUnknownToken" xml:space="preserve"><value>Only {name}, {page}, {total} and {dpi} can go in braces.</value></data>
+  <data name="NamingProblemUnclosedBrace" xml:space="preserve"><value>A { is missing its }.</value></data>
+  <data name="NamingProblemInvalidCharacter" xml:space="preserve"><value>File names can't contain \ / : * ? " &lt; &gt; |</value></data>
+  <data name="ExamplePdfName" xml:space="preserve">
+    <value>document</value>
+    <comment>Stands in for a PDF file name in the naming example when no PDF is open</comment>
+  </data>
+
+  <!-- Empty state -->
+  <data name="EmptyStateText.Text" xml:space="preserve"><value>Choose PDFs to see their pages</value></data>
+  <data name="ChoosePdfsButton.Content" xml:space="preserve"><value>Choose PDFs&#8230;</value></data>
+  <data name="ChoosePdfsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Choose PDFs</value></data>
+  <!-- PDF list -->
+  <data name="PdfsHeaderLabel.Text" xml:space="preserve"><value>PDFS</value></data>
+  <data name="DocumentDetailFormat" xml:space="preserve">
+    <value>{0} · {1} ticked</value>
+    <comment>A PDF's line in the list. {0} = "1 page" or "48 pages" (PageCountSingular / PageCountPluralFormat), {1} = how many of them are ticked</comment>
+  </data>
+  <data name="DocumentDetailFailed" xml:space="preserve"><value>Couldn't open</value></data>
+  <data name="RemoveDocumentButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Remove this PDF</value></data>
+  <data name="RemoveDocumentButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Remove this PDF</value></data>
+  <data name="AddPdfsButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Add PDFs</value></data>
+  <data name="AddPdfsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Add PDFs</value></data>
+
+  <!-- Page grid -->
+  <data name="PageCountSingular" xml:space="preserve"><value>1 page</value></data>
+  <data name="PageCountPluralFormat" xml:space="preserve">
+    <value>{0} pages</value>
+    <comment>{0} = page count, always 0 or 2+ (the "1 page" case uses PageCountSingular instead)</comment>
+  </data>
+  <data name="DocumentOpenFailedText.Text" xml:space="preserve"><value>Couldn't open this PDF.</value></data>
+  <data name="LoadingText.Text" xml:space="preserve"><value>Loading&#8230;</value></data>
+  <data name="CantLoadText.Text" xml:space="preserve"><value>Can't show this page</value></data>
+  <data name="PageCheckBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Include this page</value></data>
+  <data name="PageCheckBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Include this page</value></data>
+  <data name="CopyPageButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Copy this page</value></data>
+  <data name="CopyPageButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Copy this page</value></data>
+  <data name="PreviewPageButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Preview</value></data>
+  <data name="PreviewPageButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Preview</value></data>
+  <data name="TileRotateLeftButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Rotate left (Shift+R)</value></data>
+  <data name="TileRotateLeftButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Rotate left</value></data>
+  <data name="TileRotateRightButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Rotate right (R)</value></data>
+  <data name="TileRotateRightButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Rotate right</value></data>
+
+  <!-- Preview overlay -->
+  <data name="PreviewCloseButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Close (Esc)</value></data>
+  <data name="PreviewCloseButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Close preview</value></data>
+  <data name="PreviewRotateLeftButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Rotate left (Shift+R)</value></data>
+  <data name="PreviewRotateLeftButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Rotate left</value></data>
+  <data name="PreviewRotateRightButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Rotate right (R)</value></data>
+  <data name="PreviewRotateRightButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Rotate right</value></data>
+  <data name="PreviewCheckBox.Content" xml:space="preserve"><value>Include this page</value></data>
+  <data name="PreviewIndicatorFormat" xml:space="preserve">
+    <value>{0} — page {1} of {2}</value>
+    <comment>{0} = PDF file name, {1} = page number, {2} = that PDF's page count</comment>
+  </data>
+
+  <!-- Saving -->
+  <data name="CancelExportButton.Content" xml:space="preserve"><value>Cancel</value></data>
+  <data name="ExportProgressFormat" xml:space="preserve">
+    <value>{0} of {1} pages saved</value>
+    <comment>{0} = pages finished so far, {1} = pages being saved</comment>
+  </data>
+  <data name="WaitingToSaveMessage" xml:space="preserve">
+    <value>Opening PDFs, then saving and closing&#8230;</value>
+    <comment>Shown after Save in the save-before-closing dialog, while PDFs are still opening</comment>
+  </data>
+  <data name="WaitingToSaveCancelAction" xml:space="preserve"><value>Cancel</value></data>
+  <data name="NothingCheckedMessage" xml:space="preserve"><value>Tick at least one page to save.</value></data>
+  <data name="NothingExportableMessage" xml:space="preserve"><value>None of the ticked pages can be read, so there is nothing to save.</value></data>
+  <data name="NamingProblemMessage" xml:space="preserve">
+    <value>The file name pattern in Options can't be used. {0}</value>
+    <comment>{0} = what is wrong with it, one of the NamingProblem* strings</comment>
+  </data>
+  <data name="DuplicateNameAddPageMessage" xml:space="preserve">
+    <value>Two pages would both be saved as {0}. Add {{page}} to the file names in Options.</value>
+    <comment>{0} = the file path; {{page}} is a literal token, the braces doubled for string.Format</comment>
+  </data>
+  <data name="DuplicateNameAddNameMessage" xml:space="preserve">
+    <value>Pages from two PDFs would both be saved as {0}. Add {{name}} to the file names in Options.</value>
+    <comment>{0} = the file path; {{name}} is a literal token, the braces doubled for string.Format</comment>
+  </data>
+  <data name="DuplicateNameRewordMessage" xml:space="preserve">
+    <value>Two pages would both be saved as {0}. Change the file names in Options, for example by putting a - between the tokens.</value>
+    <comment>{0} = the file path. Shown when the pattern has {name} and {page} but they run into each other or into {total} (so report1 page 2 and report page 12 both give report12)</comment>
+  </data>
+  <data name="ExportFailedFormat" xml:space="preserve">
+    <value>The pages couldn't be saved: {0}</value>
+    <comment>{0} = the reason the system gave</comment>
+  </data>
+  <data name="ReplaceFilesDialog.Title" xml:space="preserve"><value>Replace existing images?</value></data>
+  <data name="ReplaceFilesFormat" xml:space="preserve">
+    <value>{0} of these images already exist, starting with {1}. Saving replaces them.</value>
+    <comment>{0} = count, {1} = the first file's path</comment>
+  </data>
+  <data name="ReplaceFilesDialog.PrimaryButtonText" xml:space="preserve"><value>Replace</value></data>
+  <data name="ReplaceFilesDialog.CloseButtonText" xml:space="preserve"><value>Cancel</value></data>
+  <data name="CloseConfirmDialog.Title" xml:space="preserve"><value>Save before closing?</value></data>
+  <data name="CloseConfirmDialog.Content" xml:space="preserve"><value>The ticked pages haven't been saved as images yet. If you close without saving, your ticks and rotations will be lost.</value></data>
+  <data name="CloseConfirmDialog.PrimaryButtonText" xml:space="preserve"><value>Save</value></data>
+  <data name="CloseConfirmDialog.SecondaryButtonText" xml:space="preserve"><value>Don't save</value></data>
+  <data name="CloseConfirmDialog.CloseButtonText" xml:space="preserve"><value>Cancel</value></data>
+  <data name="ExportedOneFolderFormat" xml:space="preserve">
+    <value>{0} images saved to {1}</value>
+    <comment>{0} = image count, {1} = folder path</comment>
+  </data>
+  <data name="ExportedOneImageFormat" xml:space="preserve">
+    <value>Saved as {0}</value>
+    <comment>{0} = file path</comment>
+  </data>
+  <data name="ExportedManyFoldersFormat" xml:space="preserve">
+    <value>{0} images saved into {1} folders</value>
+    <comment>{0} = image count, {1} = folder count</comment>
+  </data>
+  <data name="OpenExportedAction" xml:space="preserve"><value>Open</value></data>
+  <data name="ShowInFolderAction" xml:space="preserve"><value>Show in folder</value></data>
+  <data name="UnreadablePagesOneFormat" xml:space="preserve">
+    <value>A ticked page couldn't be read and wasn't saved: {0}</value>
+    <comment>{0} = one "file.pdf p4" entry (UnreadablePageFormat)</comment>
+  </data>
+  <data name="UnreadablePagesManyFormat" xml:space="preserve">
+    <value>{0} ticked pages couldn't be read and weren't saved: {1}</value>
+    <comment>{0} = count, always 2 or more (one page uses UnreadablePagesOneFormat), {1} = comma-separated "file.pdf p4" entries</comment>
+  </data>
+  <data name="UnreadablePageFormat" xml:space="preserve">
+    <value>{0} p{1}</value>
+    <comment>{0} = PDF file name, {1} = page number</comment>
+  </data>
+  <data name="CopiedFormat" xml:space="preserve">
+    <value>Page {0} of {1} is on the clipboard.</value>
+    <comment>{0} = page number, {1} = PDF file name</comment>
+  </data>
+  <data name="CopyFailedFormat" xml:space="preserve">
+    <value>Page {0} of {1} couldn't be copied: {2}</value>
+    <comment>{0} = page number, {1} = PDF file name, {2} = the reason</comment>
+  </data>
+
+  <!-- Password-protected PDFs -->
+  <data name="PasswordDialog.Title" xml:space="preserve"><value>Password needed</value></data>
+  <data name="PasswordDialog.PrimaryButtonText" xml:space="preserve"><value>Open</value></data>
+  <data name="PasswordDialog.CloseButtonText" xml:space="preserve"><value>Skip</value></data>
+  <data name="PasswordPromptFormat" xml:space="preserve">
+    <value>{0} is protected by a password. Type it to open the PDF. It isn't saved anywhere.</value>
+    <comment>{0} = PDF file name</comment>
+  </data>
+  <data name="PasswordInput.Header" xml:space="preserve"><value>Password</value></data>
+  <data name="SkippedNoPasswordFormat" xml:space="preserve">
+    <value>{0} (no password given)</value>
+    <comment>{0} = PDF file name</comment>
+  </data>
+  <data name="SkippedWrongPasswordFormat" xml:space="preserve">
+    <value>{0} (wrong password)</value>
+    <comment>{0} = PDF file name</comment>
+  </data>
+  <data name="SkippedUnsupportedEncryptionFormat" xml:space="preserve">
+    <value>{0} (uses encryption Windows can't open)</value>
+    <comment>{0} = PDF file name</comment>
+  </data>
+
+  <!-- Message bar (Bureau.Common MessageBar). Each message is a whole sentence: rows have no
+       title. -->
+  <data name="SkippedAlreadyAddedFormat" xml:space="preserve">
+    <value>already added: {0}</value>
+    <comment>{0} = PDF file name. A PDF that is already in the list, so it wasn't added a second time.</comment>
+  </data>
+  <data name="SkippedOneFormat" xml:space="preserve">
+    <value>Skipped {0}</value>
+    <comment>{0} = the one skipped file name, with its reason in brackets for a protected PDF, e.g. "locked.pdf (wrong password)"</comment>
+  </data>
+  <data name="SkippedAlreadyAddedOneFormat" xml:space="preserve">
+    <value>Skipped {0}: already added</value>
+    <comment>{0} = PDF file name. The only skipped item is a PDF already in the list.</comment>
+  </data>
+  <data name="SkippedManyFormat" xml:space="preserve">
+    <value>{0} files skipped: {1}</value>
+    <comment>{0} = count, always 2 or more; {1} = comma-separated file names. Never used for one item.</comment>
+  </data>
+  <data name="LaunchListUnreadableMessage" xml:space="preserve"><value>The files chosen in File Explorer couldn't be read. Try right-clicking them again.</value></data>
+  <data name="UnexpectedErrorMessage" xml:space="preserve"><value>Something unexpected happened. Details were saved to a local log — see About &gt; Diagnostics.</value></data>
+
+  <!-- Help topics (Bureau.Common HelpWindow), in the order HelpTopicKeys lists them. Bodies are
+       plain text: a blank line starts a new paragraph, and a "keys | action" line is a row of the
+       shortcut table, under the line directly above the rows. -->
+  <data name="HelpGettingStartedTitle" xml:space="preserve"><value>Getting started</value></data>
+  <data name="HelpGettingStartedBody" xml:space="preserve"><value>Select one or more PDFs in File Explorer, or a folder, right-click and choose Export pages as images. A folder adds the PDFs directly inside it, not the ones in its subfolders.
+
+Every page shows as a thumbnail, and every page starts ticked. Untick the pages you don't want, pick a format and resolution under Options, and press Save.
+
+To add more PDFs, drag them onto the window or use the round + button. With nothing open, use Choose PDFs.
+
+The PDFs are listed on the left. Click one to jump to its pages, drag it to change the order, or remove it with its ✕.</value></data>
+
+  <data name="HelpChoosingPagesTitle" xml:space="preserve"><value>Choosing pages</value></data>
+  <data name="HelpChoosingPagesBody" xml:space="preserve"><value>Only ticked pages are saved. Click a page's tick box to include it or leave it out.
+
+The Tick menu ticks All pages or No pages, swaps ticked and unticked, or ticks only the Odd pages or Even pages, which helps with double-sided scans.
+
+To tick particular pages, type them in the Pages box, such as 1-4, 7, 12-, and press Tick range or Enter. 12- means page 12 to the end. The pages you type are ticked and the rest are unticked.
+
+With several PDFs open, these choices apply to every PDF, and page numbers count within each one.
+
+Undo, or Ctrl+Z, takes back the last change: ticks, rotations, and removing or reordering PDFs.</value></data>
+
+  <data name="HelpRotatePreviewTitle" xml:space="preserve"><value>Rotate and preview</value></data>
+  <data name="HelpRotatePreviewBody" xml:space="preserve"><value>Rotate a page 90° with the arrows on its tile. Or click a page to select it (Ctrl+click or Shift+click to select more) and press R to turn them right or Shift+R to turn them left.
+
+Rotating changes only the saved image. The PDF itself is never changed.
+
+Double-click a page, or use its magnifier, to see it full size. In the preview, the arrow keys step through the pages, R and Shift+R rotate, Include this page ticks or unticks it, and Esc closes it.</value></data>
+
+  <data name="HelpResolutionTitle" xml:space="preserve"><value>Resolution</value></data>
+  <data name="HelpResolutionBody" xml:space="preserve"><value>Resolution, in Options, sets how many pixels each inch of the page gets (DPI, dots per inch). More dots mean a sharper image and a larger file.
+
+Screen (96 DPI): for viewing on screen. An A4 page is about 790 × 1120 pixels.
+Good (150 DPI): the default, sharp enough for most uses. About 1240 × 1750 pixels.
+Print (300 DPI): for printing. About 2480 × 3510 pixels.
+Maximum (600 DPI): for fine detail. About 4960 × 7020 pixels, and slow to save.</value></data>
+
+  <data name="HelpFormatsTitle" xml:space="preserve"><value>Formats</value></data>
+  <data name="HelpFormatsBody" xml:space="preserve"><value>PNG keeps text and lines sharp, with no loss. It is the best choice for most documents.
+
+JPEG makes smaller files, and suits scans and photos. JPEG quality sets the trade: lower is smaller, higher looks better.
+
+TIFF has no loss, and suits archives and printing.
+
+Transparent background works with PNG only: the white of the page is left see-through. JPEG and TIFF always have a white background.</value></data>
+
+  <data name="HelpWhereImagesGoTitle" xml:space="preserve"><value>Where the images go</value></data>
+  <data name="HelpWhereImagesGoBody" xml:space="preserve"><value>Save to, in Options, has three choices:
+
+A folder named after each PDF: a new folder beside the PDF, so the pages of report.pdf go into a folder called report. This is the default.
+The same folder as each PDF: the images sit beside the PDF.
+A folder I choose: every image goes into one folder. Pick it with Choose folder.
+
+If images with the same names are already there, you're asked before they are replaced.
+
+When the save is done, the message bar offers Open and Show in folder.</value></data>
+
+  <data name="HelpFileNamesTitle" xml:space="preserve"><value>File names</value></data>
+  <data name="HelpFileNamesBody" xml:space="preserve"><value>File names, in Options, is a pattern. These words in braces are filled in for each image:
+
+{name}: the PDF's file name
+{page}: the page number
+{total}: how many pages the PDF has
+{dpi}: the resolution
+
+The default, {name}-p{page}, gives report-p007.png for page 7 of a 200-page PDF. Page numbers get leading zeros, so the files sort in page order everywhere. The example under the box shows what the first page will be called.
+
+If two pages would get the same name, the app says so and how to fix it, such as adding {page} or {name}. Two PDFs with the same name saved to one folder are told apart as report and report (2).</value></data>
+
+  <data name="HelpCopyPageTitle" xml:space="preserve"><value>Copy a page</value></data>
+  <data name="HelpCopyPageBody" xml:space="preserve"><value>Copy this page, on a page's tile, puts that page on the clipboard as an image, ready to paste into an email or a document. Nothing is saved to a file.
+
+It uses the resolution from Options and the page's rotation, so it matches what Save would give.</value></data>
+
+  <data name="HelpCancellingTitle" xml:space="preserve"><value>Cancelling a save</value></data>
+  <data name="HelpCancellingBody" xml:space="preserve"><value>While a save runs, a progress bar shows how many pages are done. Cancel stops it.
+
+Until the save ends, the list of PDFs, the pages' ticks and rotations, and Options can't be changed, and Undo waits too. You can still scroll, preview pages and copy a page.
+
+Nothing is left behind: the images are only put in place once every page has been made, so a cancelled save leaves no images, and no existing ones are replaced.</value></data>
+
+  <data name="HelpPasswordsTitle" xml:space="preserve"><value>Password-protected PDFs</value></data>
+  <data name="HelpPasswordsBody" xml:space="preserve"><value>A PDF that needs a password asks for it once, naming the PDF. The password is used only to open it, and is never saved anywhere.
+
+Skip, or a wrong password, leaves that PDF out, and the other PDFs open as usual. The message bar lists it as skipped.
+
+Windows can't open PDFs that use AES-256 encryption, so they are listed as skipped without asking.</value></data>
+
+  <data name="HelpSkippedFilesTitle" xml:space="preserve"><value>Skipped and unreadable files</value></data>
+  <data name="HelpSkippedFilesBody" xml:space="preserve"><value>The message bar at the bottom lists files that weren't added, and why: a file that isn't a PDF, a PDF that's already open, or a protected PDF that couldn't be opened.
+
+A PDF that is damaged or can't be read shows Couldn't open this PDF under its heading, with Windows' reason when it gives one. The other PDFs load as usual.
+
+A single page that can't be shown says so on its tile. It is left out of the save, and the message bar names it.</value></data>
+
+  <data name="HelpPrivacyTitle" xml:space="preserve"><value>Privacy</value></data>
+  <data name="HelpPrivacyBody" xml:space="preserve"><value>Everything happens on this PC. The app never connects to the internet, and sends nothing anywhere.
+
+Your PDFs are only read, never changed, moved or deleted. Passwords are never saved. Your Options are remembered on this PC, and a log for fixing problems stays on this PC too (About, Diagnostics).</value></data>
+
+  <data name="HelpKeyboardShortcutsTitle" xml:space="preserve"><value>Keyboard shortcuts</value></data>
+  <data name="HelpKeyboardShortcutsBody" xml:space="preserve"><value>In the main window
+F1 | Open Help
+Enter | Save the ticked pages
+Ctrl+Z | Undo
+R | Rotate the selected pages right
+Shift+R | Rotate the selected pages left
+
+In the preview
+Left / Right | Previous or next page
+R | Rotate right
+Shift+R | Rotate left
+Esc | Close the preview
+
+In the Pages box
+Enter | Tick the range you typed</value></data>
+</root>

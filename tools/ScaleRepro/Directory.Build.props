@@ -1,0 +1,13 @@
+<Project>
+
+  <!-- Each build-time variant (run.ps1 passes ReproVariant) gets its own bin and obj, so switching
+       variants never reuses another's restore or output. Set here because obj must be known
+       before the SDK is imported. Being nearer than the repo's own Directory.Build.props, this
+       also keeps the app's version number out of the repro. -->
+  <PropertyGroup>
+    <ReproVariant Condition="'$(ReproVariant)' == ''">baseline</ReproVariant>
+    <BaseIntermediateOutputPath>obj\$(ReproVariant)\</BaseIntermediateOutputPath>
+    <BaseOutputPath>bin\$(ReproVariant)\</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>

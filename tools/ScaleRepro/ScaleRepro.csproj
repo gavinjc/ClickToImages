@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- A throwaway bisect for the garbled-after-a-scale-change bug (docs/PROGRESS.md M7). Not in
+       ClickToImages.sln, so the normal build and tests never touch it. With no Repro* property set
+       it matches src/ClickToImages.App's csproj on purpose: the baseline has to differ from the
+       real app only in its content. run.ps1 sets the Repro* properties for the build-time variants
+       and gives each its own bin and obj folder. -->
+  <PropertyGroup>
+    <!-- Read from the app's csproj rather than written here, so the baseline moves when the app
+         does. Bureau.Common keeps its own reference in step with the app's. -->
+    <AppSdkVersion>$([System.Text.RegularExpressions.Regex]::Replace($([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)..\..\src\ClickToImages.App\ClickToImages.App.csproj')), '(?s).*Include="Microsoft\.WindowsAppSDK" Version="([^"]+)".*', '$1'))</AppSdkVersion>
+    <ReproManifest Condition="'$(ReproManifest)' == ''">app</ReproManifest>
+    <ReproSdkVersion Condition="'$(ReproSdkVersion)' == ''">$(AppSdkVersion)</ReproSdkVersion>
+    <ReproSelfContained Condition="'$(ReproSelfContained)' == ''">false</ReproSelfContained>
+    <!-- Microsoft.WindowsAppSDK.Runtime is only referenced by the 2.x SDKs; older ones bring the
+         framework-dependent runtime check themselves. -->
+    <ReproRuntimePackage Condition="'$(ReproRuntimePackage)' == ''">true</ReproRuntimePackage>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>ScaleRepro</RootNamespace>
+    <ApplicationManifest Condition="'$(ReproManifest)' == 'app'">app.manifest</ApplicationManifest>
+    <ApplicationManifest Condition="'$(ReproManifest)' == 'stock'">stock.manifest</ApplicationManifest>
+    <!-- "none" leaves ApplicationManifest unset, so the .NET SDK embeds its default manifest. -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWinUI>true</UseWinUI>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>$(ReproSelfContained)</WindowsAppSDKSelfContained>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- The default globs only exclude this variant's bin and obj; the other variants' generated
+         .g.cs and .xaml files would otherwise be compiled in twice. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);bin\**;obj\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <!-- The 1.x SDKs still name the old win10-* RIDs, which the .NET 8+ SDK only accepts with the
+       full RID graph. Left to itself 1.5 also lists every win10-* RID, arm included, and there is
+       no .NET 8 runtime pack for those. -->
+  <PropertyGroup Condition="$(ReproSdkVersion.StartsWith('1.'))">
+    <UseRidGraph>true</UseRidGraph>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <!-- Without it 1.5 looks for VS's own PRI tasks, which dotnet build doesn't have. Build-time
+         only: it changes where resources.pri is made, not how the unpackaged exe runs. -->
+    <EnableMsixTooling>true</EnableMsixTooling>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="$(ReproSdkVersion)" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.Runtime" Version="$(ReproSdkVersion)"
+                      Condition="'$(ReproRuntimePackage)' == 'true'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Shown in the window title, since build-time variants can't be told apart from the exe. -->
+    <AssemblyMetadata Include="ReproVariant" Value="$(ReproVariant)" />
+    <AssemblyMetadata Include="ReproSdkVersion" Value="$(ReproSdkVersion)" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="$(ReproSdkVersion.StartsWith('2.'))">
+    <DefineConstants>$(DefineConstants);REPRO_SDK2</DefineConstants>
+  </PropertyGroup>
+
+  <!-- The real shared chrome, not a copy: if the cause is in Bureau.Common, a copy could miss it.
+       Left out on another SDK version, because Bureau.Common's own reference would pull the repro
+       back to the app's version; the round-1 switches that need it are then unavailable. -->
+  <PropertyGroup Condition="'$(ReproSdkVersion)' == '$(AppSdkVersion)'">
+    <DefineConstants>$(DefineConstants);REPRO_BUREAU</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(ReproSdkVersion)' == '$(AppSdkVersion)'">
+    <ProjectReference Include="..\..\external\Bureau.Common\src\Bureau.Common\Bureau.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\src\ClickToImages.App\Assets\ClickToImages.ico" Link="Assets\ClickToImages.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
